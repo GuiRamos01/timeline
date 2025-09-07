@@ -1,0 +1,304 @@
+*
+    font-family: 'Inter', sans-serif
+    font-feature-settings: 'liga' 1, 'calt' 1
+
+.Main
+    min-height: 94vh
+
+#Header
+    display: flex
+    background-color: #fff
+    position: fixed
+    top: 0
+    width: 100%
+    height: 72px
+    padding: 16px
+    border-bottom: 2px solid #ccc
+    justify-content: space-between
+    align-items: center
+    z-index: 20
+
+    img
+        width: 185px
+        cursor: pointer
+
+    svg
+        width: 30px
+        height: 25px
+        color: #000
+        cursor: pointer
+
+    .header2
+        display: flex
+        gap: 10px
+        flex-direction: row
+        align-items: center
+
+    img
+        cursor: pointer
+
+    button
+        padding: 0
+        background-color: transparent
+        color: #213547
+
+    @media (max-width: 600px)
+        img
+            width: 175px
+
+[data-slot="dropdown-menu-item"], [data-slot="dropdown-menu-label"]
+    font-size: 0.9em
+    min-width: 200px
+
+#menuHeader
+    background-color: #fff
+    border: 0px
+
+    [data-slot="sheet-header"]
+        margin-top: 50px
+        padding: 0px
+        overflow: auto
+
+    button
+        padding: 0
+        background-color: transparent
+        color: #213547
+        
+    a
+        border-width: 1px 0px 1px 0px
+        border-color: #ccc
+        padding: 10px 20px
+        transition: 0.3s
+
+    a:hover
+        background-color: #f1f1f1
+
+    .assineButton
+        background-color: #000
+        color: #fff
+        font-weight: 700
+        border-radius: 0
+        padding: 20px
+        display: flex
+        justify-content: flex-start
+
+    .search
+        background-color: #fff
+        border-bottom: 2px solid #ccc
+        display: flex
+        gap: 7px
+        padding: 10px 15px
+
+        svg
+            width: 23px
+            height: 23px
+
+        input
+            width: 100%
+            outline: none
+
+    @media (max-width: 600px)
+        width: 100%
+
+#Footer
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    width: 100%
+    background-color: #000
+    padding: 30px
+    margin-top: 30px
+
+    img
+        filter: invert(100%)
+
+    p
+        margin: 0
+        margin-bottom: 4px
+        color: #fff
+        font-size: 0.9em
+        font-weight: 600
+        cursor: default
+
+    .socialMedia
+        display: flex
+        align-items: center
+        gap: 9px
+
+        .icon
+            width: 35px
+
+        .icon2
+            width: 23px
+            height: 22px
+
+    a
+        color: #fff
+        text-decoration: underline
+
+    .group2
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 15px
+
+        @media (max-width: 600px)
+            align-items: flex-start
+
+    @media (max-width: 600px)
+        flex-direction: column
+        padding: 25px
+
+        .socialMedia
+            margin-top: 8px
+
+#NotFound
+    .Main
+        padding: 25px
+
+        h1
+            font-size: 1.8em
+            font-weight: 700
+            text-align: center
+            max-width: 506px
+            cursor: default
+
+        svg
+            width: 100px
+            height: 100px
+
+        @media (max-width: 700px)
+            h1
+                font-size: 1.4em
+
+            svg
+                width: 90px
+                height: 90px
+
+.msgAssine
+    width: 100%
+    padding: 6px
+    padding-top: 12px
+    display: flex
+    justify-content: center
+    background-color: #000
+    color: #fff
+    gap: 10px
+    align-items: center
+
+    p
+        cursor: default
+        font-weight: 500
+
+    button
+        font-size: 15px
+        font-weight: 600
+        cursor: pointer
+        background-color: #fff
+        color: #000
+        transition: 0.3s
+
+    button:hover
+        background-color: #f1f1f1
+
+    @media (max-width: 600px)
+        p
+            font-size: 15px
+
+.slick-slider
+    width: -webkit-fill-available
+    
+    #PostItem
+        margin: 0px 15px
+
+    path
+        color: #000
+
+    .slick-prev
+        left: 22px
+        z-index: 15
+        top: 38%
+        background-color: #ffffffad !important
+        border-radius: 50%
+        width: 25px
+        height: 25px
+
+    .slick-prev:before
+        font-size: 30px
+
+    .slick-prev:hover
+        background-color: #fff
+        
+    .slick-next
+        right: 20px
+        z-index: 15
+        top: 38%
+        background-color: #ffffffad !important
+        border-radius: 50%
+        width: 25px
+        height: 25px
+
+    .slick-next:before
+        font-size: 30px
+
+    .slick-dots
+        bottom: -27px
+
+        @media (max-width: 600px)
+            bottom: -38px
+
+.navegation
+    .p-button
+        cursor: pointer
+
+    .is-disabled
+        background: #fff
+        color: #999
+        border-color: #ddd
+        cursor: default
+        opacity: 0.6
+
+        span
+            cursor: default
+
+#Cookie
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    padding: 17px
+    font-size: 15px
+    gap: 10px
+    left: 0
+    position: fixed
+    box-shadow: 1px -4px 10px 0px #3535353d
+    width: 100%
+    z-index: 5
+    bottom: 0
+
+    p
+        margin: 5px 0px
+        cursor: default
+
+    .buttons
+        display: flex
+        gap: 8px
+        align-items: center
+
+        button
+            border-radius: 25px
+            cursor: pointer
+
+        button:hover
+            text-decoration: underline
+
+        .button1
+            padding: 0.6rem 0.7rem
+            background-color: #000
+            color: #fff
+            border-radius: 9px
+
+        .button2
+            padding: 0.6rem 0.7rem
+            background-color: #ccc
+            color: #000
+            border-radius: 9px

@@ -1,0 +1,78 @@
+#QuemSomos
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .Main
+        display: flex
+        flex-direction: column
+        width: 100%
+        max-width: 1200px
+        align-items: center
+        padding: 35px
+        gap: 23px
+
+        @media (max-width: 700px)
+            padding: 22px
+            margin-top: 20px
+        
+    .HeaderAuthor
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        cursor: default
+        width: 100%
+        border: 1px solid #ccc
+        padding: 25px
+        border-radius: 12px
+        gap: 10px
+
+        h1
+            font-size: 1.6em
+            font-weight: 800
+            margin: 0
+
+        p
+            margin: 0
+            line-height: 24px
+            text-align: center
+
+        .image
+            border-radius: 50%
+            max-width: 160px
+            width: 100%
+            height: 155px
+            background-color: #ccc
+
+        .authorDetails
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+            margin-top: 13px
+
+            p
+                font-size: 1.1em
+                text-align: left
+
+    .text
+        max-width: 800px
+        text-align: center
+
+        h1
+            font-size: 2.5em
+            margin-bottom: 30px
+            cursor: default
+            text-transform: uppercase
+
+        p
+            font-size: 1.3em
+            cursor: default
+
+            @media (max-width: 600px)
+                font-size: 1.1em
+
+    h2
+        margin: 20px 0px
+        cursor: default
+        text-align: center

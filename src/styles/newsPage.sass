@@ -1,0 +1,260 @@
+#newsPage
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+    .Main
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .author
+        display: flex
+
+        img
+            width: 40px
+            height: 40px
+
+    .post
+        max-width: 800px
+        color: #000
+        margin: 15px
+
+        .newsHeader
+            margin: 20px 0px
+            display: flex
+            flex-direction: column
+            gap: 10px
+
+            h1
+                margin: 0px
+                font-size: 1.8em
+
+                @media (max-width: 600px)
+                    font-size: 1.6em;
+
+            p
+                font-size: 1.2em
+                margin: 0px
+
+            .author
+                display: flex
+                margin-top: 5px
+                gap: 8px
+
+                img
+                    border-radius: 50%
+                    background-color: #ccc
+
+                .authorHeader
+                    display: flex
+                    margin: 0px
+                    font-size: 1em
+                    font-weight: 700
+                    color: #3a3a3a
+
+                .authorHeader:hover
+                    text-decoration: underline
+
+                .dateHeader
+                    display: flex
+                    margin: 0px
+                    font-size: 0.9em
+                    font-weight: 400
+                    color: #3a3a3a
+                    cursor: default
+
+            .subtitle
+                font-size: 1.1em
+                color: #3a3a3a
+                line-height: 1.4em
+
+                @media (max-width: 600px)
+                    font-size: 1em
+
+        .content
+            h2
+                line-height: 1.3em
+
+            p
+                line-height: 1.5em;
+
+            a
+                text-decoration: underline
+
+        .content-img
+            width: 100%
+            height: auto
+            margin: 5px 0px
+            background-color: #ccc
+        
+        .caption-img, .wp-element-caption
+            color: #494848
+            font-size: 0.9em
+            font-style: italic
+            margin-bottom: 15px
+
+        .restrictArticle
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 25px 15px
+            gap: 12px
+            box-shadow: 1px -15px 20px 0px rgb(0 0 0 / 20%)
+
+            p
+                margin: 0
+                max-width: 307px
+                font-weight: 500
+                color: #282828
+                text-align: center
+                cursor: default
+
+            h3
+                margin: 0
+                font-size: 1.1em
+                cursor: default
+
+            a
+                text-decoration: underline
+
+    .authorPost
+        display: flex
+        gap: 18px
+        align-items: flex-start
+        background-color: #f1f1f1
+        margin-top: 20px
+        padding: 14px
+
+        @media (max-width: 700px)
+            gap: 14px
+
+        a
+            color: #000
+
+        img
+            border-radius: 50%
+            width: 80px
+            height: 80px
+            background-color: #ccc
+            cursor: pointer
+
+            @media (max-width: 700px)
+                width: 70px
+                height: 70px
+
+        h1
+            font-size: 1.3em
+            margin-top: 6px
+
+        p
+            font-size: 0.9em
+            font-weight: 400
+            margin: 5px 0px
+
+    .msgApoie
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 24px
+        background-color: #000
+        color: #fff
+        margin-top: 25px
+
+        h1
+            font-size: 1.6em
+            font-weight: 800
+            cursor: default
+
+        p
+            font-size: 1.1em
+            margin: 10px 0px
+            cursor: default
+
+        button
+            border-radius: 0px
+            font-size: 1.1em
+            font-weight: 600
+            cursor: pointer
+            background-color: #fff
+            color: #000
+            transition: 0.3s
+
+        button:hover
+            background-color: #dfdfdf
+
+    #WrapperGrid
+        max-width: 800px
+        margin: 15px
+
+        @media (max-width: 700px)
+            width: 100%
+            margin: 0px
+
+    .titleBlock
+        font-size: 1.5em
+        font-weight: 800
+        cursor: default
+        text-decoration: underline
+        margin: 0px
+        width: 100%
+        max-width: 800px
+        padding: 10px 0px
+
+        @media (max-width: 700px)
+            padding: 5px 20px
+
+    .skeleton
+        width: 100%
+        margin-top: 10px
+        padding: 0px 20px
+
+        .skeleton-box
+            position: relative
+            overflow: hidden
+            background-color: #e9ecef !important
+            border-radius: 6px
+
+            &::after
+                content: ""
+                position: absolute
+                inset: 0
+                transform: translateX(-100%)
+                background: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.6) 50%,
+                    rgba(255, 255, 255, 0) 100%
+                )
+                animation: shimmer 1.5s infinite
+
+        .title
+            height: 28px
+            width: 100%
+
+        .newsHeader
+            width: 100%
+            max-width: 800px
+
+        .subtitle
+            height: 18px
+            width: 100%
+
+        .caption-img
+            height: 400px
+            width: 100%
+
+        .content
+            display: flex
+            flex-direction: column
+            gap: 12px
+
+            .line
+                height: 30px
+                width: 100%
+
+    @keyframes shimmer
+        100%
+            transform: translateX(100%)
