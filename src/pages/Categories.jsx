@@ -69,6 +69,12 @@ const Categories = () => {
 
   return (
     <aside id="Categories">
+        {category && category.name && (
+          <Helmet>
+            <title>{category} | Revista Timeline</title>
+          </Helmet>
+        )}
+
         <Header/>
         <SubHeader/>
     

@@ -4,14 +4,15 @@ import "../styles/newsPage.sass"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MSGassine from "../components/SubHeader";
+import { Helmet } from "react-helmet";
 
 const PoliticasPrivacidade = () => {
 
   return (
     <aside id="newsPage">
-      <head>
+      <Helmet>
         <title>Políticas de Privacidade | SocialApp</title>
-      </head>
+      </Helmet>
 
       <Header />
 

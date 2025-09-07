@@ -21,7 +21,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 
-import PostsJson from "../scripts/postsSearch.json"
+import { Helmet } from "react-helmet";
 
 const Search = () => {
   const [posts, setPosts] = useState([]);
@@ -65,6 +65,12 @@ const Search = () => {
   
   return (
     <aside id="Categories">
+        {searchText && (
+          <Helmet>
+            <title>{searchText} | Revista Timeline</title>
+          </Helmet>
+        )}
+
         <Header/>
         <SubHeader/>
     

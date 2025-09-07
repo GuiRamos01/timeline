@@ -79,7 +79,6 @@ function Header() {
               {isLoading ? ("") : isError ? ("") : (
                 categories?.map((cat) => (
                   <Link
-                    reloadDocument
                     key={cat.id}
                     to={`/category/${cat.slug}`}
                   >

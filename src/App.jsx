@@ -11,6 +11,7 @@ import UltimasNoticias from './pages/UltimasNoticias';
 import Search from './pages/Search';
 import PoliticasPrivacidade from './pages/PoliticasPrivacidade';
 import Login from './pages/Login';
+import { Helmet } from 'react-helmet';
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -25,6 +26,10 @@ function AppContent() {
 
   return (
     <Provider store={store}>
+        <Helmet>
+          <title>Revista Timeline</title>
+        </Helmet>
+
         <BrowserRouter>
           <Wrapper>
             <Routes>

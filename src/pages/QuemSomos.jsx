@@ -31,6 +31,10 @@ const ImageAuthor3 = styled.div`
 const QuemSomos = () => { 
   return (
     <aside id="QuemSomos">
+        <Helmet>
+          <title>Quem somos | Revista Timeline</title>
+        </Helmet>
+
         <Header/>
         <SubHeader/>
     
