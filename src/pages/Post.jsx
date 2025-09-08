@@ -83,6 +83,12 @@ const Post = () => {
     post?.yoast_head_json?.schema?.["@graph"]?.find((item) => item?.caption)
       ?.caption ?? null;
 
+  useEffect(() => {
+    if (title) {
+      document.title = `${title} | Revista Timeline`;
+    }
+  }, [title]);
+      
   if (notFound) {
     return <NotFound />;
   }

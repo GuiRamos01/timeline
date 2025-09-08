@@ -10,6 +10,7 @@ import {PostItem, PostItemSkeleton} from "../components/PostItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import {
   Pagination,
@@ -62,6 +63,12 @@ const Categories = () => {
 
     fetchPosts();
   }, [page, path]);
+
+  useEffect(() => {
+    if (category && category.name) {
+      document.title = `${category.name} - Categoria | Revista Timeline`;
+    }
+  }, [category]);
   
   if (notFound) {
     return <NotFound />;
@@ -69,12 +76,6 @@ const Categories = () => {
 
   return (
     <aside id="Categories">
-        {category && category.name && (
-          <Helmet>
-            <title>{category} | Revista Timeline</title>
-          </Helmet>
-        )}
-
         <Header/>
         <SubHeader/>
     

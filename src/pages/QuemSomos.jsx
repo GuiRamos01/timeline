@@ -2,6 +2,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SubHeader from "../components/SubHeader";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 import "../style.sass"
 import "../styles/QuemSomos.sass"
@@ -29,12 +31,12 @@ const ImageAuthor3 = styled.div`
 `;
 
 const QuemSomos = () => { 
+  useEffect(() => {
+    document.title = "Quem somos | Revista Timeline";
+  }, []);
+
   return (
     <aside id="QuemSomos">
-        <Helmet>
-          <title>Quem somos | Revista Timeline</title>
-        </Helmet>
-
         <Header/>
         <SubHeader/>
     

@@ -133,6 +133,10 @@ const Home = () => {
 
     fetchPosts2();
   }, []);
+
+  useEffect(() => {
+      document.title = `Revista Timeline`;
+  }, []);
   
   return (
     <aside id="Home">

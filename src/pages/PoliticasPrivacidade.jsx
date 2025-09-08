@@ -5,8 +5,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MSGassine from "../components/SubHeader";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 const PoliticasPrivacidade = () => {
+  useEffect(() => {
+      document.title = `Políticas de Privacidade | Revista Timeline`;
+  }, []);
 
   return (
     <aside id="newsPage">

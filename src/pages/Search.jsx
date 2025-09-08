@@ -62,6 +62,12 @@ const Search = () => {
 
     fetchPosts();
   }, [page, encodedInput]);
+
+  useEffect(() => {
+    if (searchText) {
+      document.title = `${searchText} - Busca | Revista Timeline`;
+    }
+  }, [searchText]);
   
   return (
     <aside id="Categories">

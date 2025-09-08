@@ -72,18 +72,19 @@ const CategoryAuthor = () => {
       fetchPost();
     }, [page, path]);
 
+  useEffect(() => {
+    if (author && author.name) {
+      document.title = `${author.name} | Revista Timeline`;
+    }
+  }, [author]);
+
+
   if (notFound) {
     return <NotFound />;
   }
   
   return (
     <aside id="Categories">
-        {author && author.name && (
-          <Helmet>
-            <title>{author.name} | Revista Timeline</title>
-          </Helmet>
-        )}
-
         <Header/>
         <SubHeader/>
     
