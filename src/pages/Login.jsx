@@ -72,7 +72,7 @@ const [type, setType] = useState("password");
   return (
     <aside id="Login" className="noheaderMenu">   
       <Helmet>
-        <title>Entrar / SocialApp</title>
+        <title>Entrar | Revista Timeline</title>
       </Helmet>
    
       <div className="headerBack bg-1">
