@@ -22,6 +22,8 @@ import AuthorsJson from "../scripts/authors.json"
 const Home = () => {
   const [posts, setPosts] = useState({});
   const [posts2, setPosts2] = useState({});
+  const [posts3, setPosts3] = useState({});
+  const [posts4, setPosts4] = useState({});
   const [authors] = useState(AuthorsJson);
 
   var settings = {
@@ -125,7 +127,17 @@ const Home = () => {
           `https://revistatimeline.com/wp-json/wp/v2/posts?categories=600&per_page=9`
         );
 
+        const res2 = await axios.get(
+          `https://revistatimeline.com/wp-json/wp/v2/posts?categories=8&per_page=9`
+        );
+
+        const res3 = await axios.get(
+          `https://revistatimeline.com/wp-json/wp/v2/posts?categories=6&per_page=9`
+        );
+
         setPosts2(res.data);
+        setPosts3(res2.data);
+        setPosts4(res3.data);
       } catch (error) {
         console.error("Erro ao carregar posts:", error);
       }
@@ -183,7 +195,9 @@ const Home = () => {
 
           <div className="block">
             {posts2.length > 0 && (
-              <div className="headerBlock">ARTIGOS EM DESTAQUE</div>
+              <div className="headerBlock">
+                <Link to="/category/artigo">ARTIGOS</Link>
+              </div>
             )}
 
             {posts2.length > 0 ? (
@@ -201,6 +215,49 @@ const Home = () => {
             )}
           </div>
 
+          <div className="block">
+            {posts4.length > 0 && (
+              <div className="headerBlock">
+                <Link to="/category/noticias">NOTÍCIAS</Link>
+              </div>
+            )}
+
+            {posts4.length > 0 ? (
+                <Slider {...settings}>
+                  {posts4.map((post) => (
+                    <PostItem key={post.id} post={post} />
+                  ))}
+                </Slider>
+            ) : (
+              <div id="WrapperGrid">
+                <PostItemSkeleton />
+                <PostItemSkeleton />
+                <PostItemSkeleton />
+              </div>
+            )}
+          </div>
+
+          <div className="block">
+            {posts3.length > 0 && (
+              <div className="headerBlock">
+                <Link to="/category/saude">SAÚDE</Link>
+              </div>
+            )}
+
+            {posts3.length > 0 ? (
+                <Slider {...settings}>
+                  {posts3.map((post) => (
+                    <PostItem key={post.id} post={post} />
+                  ))}
+                </Slider>
+            ) : (
+              <div id="WrapperGrid">
+                <PostItemSkeleton />
+                <PostItemSkeleton />
+                <PostItemSkeleton />
+              </div>
+            )}
+          </div>
         </div>
         <Footer/>
     </aside>

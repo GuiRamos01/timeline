@@ -12,6 +12,7 @@ import Search from './pages/Search';
 import PoliticasPrivacidade from './pages/PoliticasPrivacidade';
 import Login from './pages/Login';
 import { Helmet } from 'react-helmet';
+import NotFound from './components/NotFound';
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -42,6 +43,7 @@ function AppContent() {
               <Route path='/search' element={currentUser ? <Search /> : <Login />} />
               <Route path='/quem-somos' element={currentUser ? <QuemSomos /> : <Login />} />
               <Route path='/politicas-privacidade' element={<PoliticasPrivacidade />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </Wrapper>
         </BrowserRouter>

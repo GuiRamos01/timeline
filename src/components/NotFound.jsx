@@ -1,8 +1,13 @@
 import { SearchX } from "lucide-react";
+import { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
 function NotFound() {
+  useEffect(() => {
+      document.title = `Revista Timeline`;
+  }, []);
+
   return (
     <aside id="NotFound">
         <Header/>
