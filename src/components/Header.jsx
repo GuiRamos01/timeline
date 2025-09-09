@@ -33,7 +33,8 @@ function Header() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const encodedInput = encodeURIComponent(inputText);
-    window.location.href = `/search/?q=${encodedInput}`;
+    navigate(`/search/?q=${encodedInput}`);
+    // window.location.href = `/search/?q=${encodedInput}`;
   };
 
   const { data: categories, isLoading, isError } = useQuery({
