@@ -33,8 +33,7 @@ function Header() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const encodedInput = encodeURIComponent(inputText);
-    navigate(`/search/?q=${encodedInput}`);
-    // window.location.href = `/search/?q=${encodedInput}`;
+    window.location.href = `/search/?q=${encodedInput}`;
   };
 
   const { data: categories, isLoading, isError } = useQuery({
@@ -65,7 +64,7 @@ function Header() {
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                 />
-                <Search />
+                <Search onClick={handleSubmit} />
               </form>
               <br />
 
