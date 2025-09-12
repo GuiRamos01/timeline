@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
 import Post from './pages/Post';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './redux/store';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
@@ -23,7 +23,7 @@ const Wrapper = ({ children }) => {
 }
 
 function AppContent() {
-  const { currentUser } = useSelector((state) => state.user);
+  // const { currentUser } = useSelector((state) => state.user);
 
   return (
     <Provider store={store}>
@@ -34,14 +34,14 @@ function AppContent() {
         <BrowserRouter>
           <Wrapper>
             <Routes>
-              <Route path='/' element={currentUser ? <Home /> : <Login />} />
+              <Route path='/' element={<Home />} />
               <Route path='/login' element={<Login />} />
-              <Route path='/news/:id' element={currentUser ? <Post /> : <Login />} />
-              <Route path='/category/:id' element={currentUser ? <Categories /> : <Login />} />
-              <Route path='/author/:id' element={currentUser ? <CategoryAuthor /> : <Login />} />
-              <Route path='/ultimas-noticias' element={currentUser ? <UltimasNoticias /> : <Login />} />
-              <Route path='/search' element={currentUser ? <Search /> : <Login />} />
-              <Route path='/quem-somos' element={currentUser ? <QuemSomos /> : <Login />} />
+              <Route path='/news/:id' element={<Post />} />
+              <Route path='/category/:id' element={<Categories />} />
+              <Route path='/author/:id' element={<CategoryAuthor />} />
+              <Route path='/ultimas-noticias' element={<UltimasNoticias />} />
+              <Route path='/search' element={<Search />} />
+              <Route path='/quem-somos' element={<QuemSomos />} />
               <Route path='/politicas-privacidade' element={<PoliticasPrivacidade />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
