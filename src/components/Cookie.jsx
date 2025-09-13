@@ -38,11 +38,13 @@ const CookieConsent = () => {
   if (!showCookieBanner) return null;
 
   return (
-    <div id="Cookie" className="bg-1">
-      <p>Usamos cookies para fins de personalização, publicidade e mais. Ao interagir com este site, você concorda com nossa Políticas de Privacidade e Cookies.</p>
-      <div className="buttons">
-        <Button className="button1" onClick={handleConsent}>Ok, entendi.</Button>
-        <Link to="/politicas-privacidade"><button className="button2">Saiba mais</button></Link>
+    <div id='Cookie'>
+      <div className="cookieContent bg-1">
+        <p>Usamos cookies para fins de personalização, publicidade e mais. Ao interagir com este site, você concorda com nossa Políticas de Privacidade e Cookies.</p>
+        <div className="buttons">
+          <Button className="button1" onClick={handleConsent}>Ok, entendi.</Button>
+          <Link to="/politicas-privacidade"><button className="button2">Saiba mais</button></Link>
+        </div>
       </div>
     </div>
   );
