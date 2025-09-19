@@ -86,9 +86,27 @@ const Post = () => {
   useEffect(() => {
     if (title) {
       document.title = `${title} | Revista Timeline`;
+
+      let metaTitle = document.querySelector("meta[name='title']");
+      if (!metaTitle) {
+        metaTitle = document.createElement("meta");
+        metaTitle.name = "title";
+        document.head.appendChild(metaTitle);
+      }
+      metaTitle.content = title;
     }
-  }, [title]);
-      
+
+    if (excerpt) {
+      let metaDesc = document.querySelector("meta[name='description']");
+      if (!metaDesc) {
+        metaDesc = document.createElement("meta");
+        metaDesc.name = "description";
+        document.head.appendChild(metaDesc);
+      }
+      metaDesc.content = excerpt;
+    }
+  }, [title, excerpt]);
+
   if (notFound) {
     return <NotFound />;
   }

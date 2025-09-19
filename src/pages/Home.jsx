@@ -30,16 +30,17 @@ const Home = () => {
     dots: true,
     infinite: false,
     speed: 500,
+    mobileFirst: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     initialSlide: 0,
     nextArrow: <ChevronRight />,
     prevArrow: <ChevronLeft />,
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: true
         }
@@ -48,12 +49,11 @@ const Home = () => {
         breakpoint: 950,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2
+          slidesToScroll: 2,
         }
       },
       {
-        breakpoint: 500,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -62,18 +62,18 @@ const Home = () => {
     ]
   };
 
-  var settings2 = {
+  var settingsAuthor = {
     dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     initialSlide: 0,
     nextArrow: <ChevronRight/>,
     prevArrow: <ChevronLeft/>,
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -85,7 +85,6 @@ const Home = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          initialSlide: 2,
           dots: true
         }
       },
@@ -94,8 +93,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
-          dots: false
+          dots: false,
         }
       }
     ]
@@ -178,7 +176,7 @@ const Home = () => {
             <div className="block2">
               <div className="headerBlock">PRINCIPAIS COLUNISTAS</div>
 
-              <Slider {...settings2}>
+              <Slider {...settingsAuthor}>
                 {authors.map((author) => (
                   <div key={author.id} className="Author">
                     <Link to={author.link}>
