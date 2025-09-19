@@ -150,12 +150,12 @@ const Post = () => {
 
             <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
 
-            <div className="restrictArticle">
+            {/* <div className="restrictArticle">
               <p className="text-lg">Esta publicação é exclusiva para assinantes</p>
               <h3>A partir de R$29/mês</h3>
               <Button>Assine já</Button>
               <p>Já é assinante? <Link href="#">Entre aqui</Link></p>
-            </div>
+            </div> */}
 
             <div className="authorPost">
                 {authorImg && <img onClick={() => navigate(`/author/${author.slug}`)} src={authorImg} alt="" />}
