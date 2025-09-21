@@ -33,7 +33,7 @@ export function PostItem({post}) {
     const ogImageUrl = post.yoast_head_json?.og_image?.[0]?.url || null;
 
   return (
-    <Link to={`/news/${post.slug}`}>
+    <Link reloadDocument to={`/news/${post.slug}`}>
         <div id="PostItem">
             <img className="content-img" alt="" src={ogImageUrl}/>
             <div className="postContent">

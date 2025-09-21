@@ -71,12 +71,6 @@ const Search = () => {
   
   return (
     <aside id="Categories">
-        {searchText && (
-          <Helmet>
-            <title>{searchText} | Revista Timeline</title>
-          </Helmet>
-        )}
-
         <Header/>
         <SubHeader/>
     
