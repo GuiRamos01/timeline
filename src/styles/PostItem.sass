@@ -8,23 +8,26 @@
         padding: 20px
 
 @media (min-width: 700px)
-    .itemsFlex
-        display: flex !important
-        flex-direction: column
+  .itemsFlex
+      display: flex !important
+      flex-direction: column
 
-        #PostItem
-            display: flex
-            flex-direction: row
+      #PostItem
+          display: flex
+          flex-direction: row
 
-        .content-img
-            max-width: 317px !important
+      .content-img
+          max-width: 317px !important
 
-        .postContent
-            padding: 10px 0px
-            gap: 5px
+      .postContent
+          padding: 10px 0px
+          gap: 5px
 
-        .skeleton-box
-            width: 500px !important
+      .subtitle
+        display: -webkit-box !important
+
+      .skeleton-box
+          width: 500px !important
 
 #PostItem
   display: flex
@@ -60,6 +63,22 @@
 
     b
       font-weight: 700
+
+    .subtitle
+      display: none
+      font-weight: 400
+      line-height: 20px
+      font-size: 0.9em
+      color: #494848
+      font-style: oblique
+      margin-top: 3px
+
+      max-width: 700px
+      width: 100%
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 2
+      overflow: hidden
+      text-overflow: ellipsis
 
   /* --- Skeleton Mode --- */
   &.skeleton

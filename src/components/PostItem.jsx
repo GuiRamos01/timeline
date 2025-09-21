@@ -31,6 +31,7 @@ export function PostItemSkeleton() {
 export function PostItem({post}) {
     const title = decodeHtmlEntities(post.title?.rendered);
     const ogImageUrl = post.yoast_head_json?.og_image?.[0]?.url || null;
+    const excerpt = decodeHtmlEntities(post?.yoast_head_json?.description ?? "");
 
   return (
     <Link reloadDocument to={`/news/${post.slug}`}>
@@ -41,6 +42,7 @@ export function PostItem({post}) {
                 <p className="dateHeader">
                 <b>{post.yoast_head_json?.author}</b> • {new Date(post.date).toLocaleDateString()}
                 </p>
+                <div className="subtitle" dangerouslySetInnerHTML={{ __html: excerpt }} />
             </div>
         </div>
     </Link>
