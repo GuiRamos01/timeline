@@ -1,0 +1,380 @@
+#Login
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .headerBack
+        display: flex
+        background-color: #fff
+        position: fixed
+        top: 0
+        width: 100%
+        height: 72px
+        padding: 16px
+        border-bottom: 2px solid #ccc
+        justify-content: center
+        align-items: center
+        z-index: 20
+
+        img
+            width: 185px
+
+    .Header
+        display: flex
+        align-items: center
+        width: 100%
+        height: 56px
+        border-bottom: 1px solid #ccc
+        position: fixed
+        top: 0
+        z-index: 2
+        box-shadow: 0 1px 6px 0 rgb(32 33 36 / 37%)
+
+        .headerMain
+            display: flex
+            align-items: center
+            padding: 10px
+            width: 100%
+
+            .logo
+                flex: 1
+                visibility: hidden
+
+                img
+                    width: 44px
+                    height: 35px
+                    cursor: pointer
+
+            @media (max-width: 850px)
+                .logo
+                    visibility: visible
+
+            .imgUser
+                width: 35px
+                height: 35px
+                border-radius: 50%
+                background-color: #ccc
+                cursor: pointer
+
+        .headerMain2
+            display: flex
+            align-items: center
+            gap: 12px
+
+            svg
+                width: 25px
+                height: 25px
+
+            .notification
+                display: flex
+                justify-content: flex-end
+
+                svg
+                    width: 27px
+                    height: 27px
+
+                .alertNy
+                    background-color: #ff0030
+                    width: 10px
+                    height: 10px
+                    margin-right: 2px
+                    position: absolute
+                    border-radius: 50%
+
+    .headerMenu
+        box-shadow: none
+        top: 55px
+        z-index: 1
+        max-width: 550px
+        border-bottom: 1px solid
+        border-color: #7c7c7c
+
+        @media (min-width: 600px)
+            border: 1px solid
+            border-color: #ccc
+
+        @media (max-width: 600px)
+            max-width: none
+
+        @media (min-width: 1300px)
+            max-width: 665px
+
+        a
+            width: 100%
+
+        .Item
+            display: flex
+            width: 100%
+            cursor: pointer
+            height: 55px
+            font-size: 15px
+            font-weight: 600
+            border-bottom: 3px solid
+            border-color: transparent
+            justify-content: center
+            align-items: center
+
+        .itemActive
+            border-color: #076f81
+
+    // .headerBack
+    //     display: flex
+    //     align-items: center
+    //     width: 100%
+    //     height: 56px
+    //     border-bottom: 1px solid #ccc
+    //     position: fixed
+    //     top: 0px
+    //     z-index: 1
+
+    //     .hbButton
+    //         padding: 13px
+    //         display: flex
+    //         align-items: center
+    //         cursor: pointer
+
+    //         svg
+    //             width: 25px
+    //             height: 25px
+
+    //     @media (min-width: 600px)
+    //         border: 1px solid
+    //         border-color: #ccc
+
+    //     @media (max-width: 600px)
+    //         max-width: none
+    //         border: none
+    //         box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28)
+
+    //     @media (min-width: 1300px)
+    //         max-width: 665px
+
+    .passwordInput
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        gap: 5px
+
+        input
+            padding-right: 38px
+
+    .buttonHidden
+        position: absolute
+        display: flex
+        padding: 7px
+        cursor: pointer
+
+
+    .hm-mtop
+        margin-top: 108px !important
+
+        .Main
+            display: flex
+            align-items: center
+            flex-direction: column
+
+            max-width: 550px
+            width: 100%
+            min-height: 94vh
+            margin-top: 55px
+            margin-bottom: 0px
+            padding-bottom: 15px
+            border-width: 0px 1px
+            border-color: #ccc
+
+            @media (max-width: 720px)
+                margin-bottom: 80px
+                min-height: 88vh
+
+                p
+                    font-size: 15px
+
+            @media (max-width: 600px)
+                border: none
+                max-width: none
+
+            @media (min-width: 1300px)
+                max-width: 665px
+
+            .loadingPosts
+                width: 100%
+                margin-bottom: 5px
+                display: flex
+                justify-content: center
+                background-color: hsl(var(--accent))
+
+            .loadingPosts2
+                width: 100%
+                display: flex
+                justify-content: center
+
+        form
+            width: 100%
+            padding: 15px
+            padding-bottom: 35px
+            gap: 15px
+
+            h1
+                font-size: 1.1rem
+                font-weight: bold
+                cursor: default
+
+            p
+                cursor: default
+
+            .detailsInput
+                display: flex
+                align-items: center
+                gap: 10px
+                padding-top: 5px
+            
+            .focus-visible\:ring-offset-2:focus-visible,
+            .focus\:ring-offset-2
+                --tw-ring-offset-width: none
+
+            .twitterPost
+                display: flex
+                align-items: center
+                margin-top: 10px !important
+
+            label
+                font-size: 15px
+                font-weight: 600
+                margin-bottom: 5px
+                flex: 1
+
+            button
+                border-radius: 20px
+                font-weight: 600
+
+            button[role="combobox"]
+                border-radius: 5px
+
+            div
+                margin-top: 0px !important
+
+            textarea
+                resize: none
+                height: 170px
+
+            .countText
+                font-size: 13px
+                font-weight: 500
+                cursor: default
+                display: flex
+                justify-content: flex-end
+
+            .timezone
+                font-size: 13px
+                cursor: default
+
+            .msg
+                font-size: 13px
+                cursor: default
+
+            .msg2
+                font-size: 13px
+                text-decoration: underline
+                cursor: pointer
+
+        .verified2
+            color: #e6cc00
+            width: 100%
+            max-width: 1.1rem
+            max-height: 1.1rem
+
+    .Main
+        max-width: 460px
+        width: 100%
+        position: absolute
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        padding: 20px
+        padding-top: 30px
+
+        h1
+            font-size: 1.6em
+            text-align: center
+            cursor: default
+
+        label
+            font-size: 1em
+
+        .buttonItens
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+
+        button
+            display: flex
+            border-radius: 20px
+            min-width: 300px
+            gap: 7px
+            font-weight: 600
+            transition: 0.3s
+            width: 100%
+            cursor: pointer
+
+        .error-text
+            font-size: 1em
+            font-weight: 600
+            color: crimson
+
+        .login-x
+            background-color: #000
+
+        .login-x:hover
+            background-color: #2e2d2d
+
+        .login-email
+            background-color: #fff
+            border: 1px solid #ccc
+            color: #000
+
+        .login-email:hover
+                background-color: #f1f1f1
+                border: 1px solid #f1f1f1
+
+    .info-alert
+        display: flex
+        align-items: center
+        width: 100%
+        cursor: default
+        gap: 6px
+        border-width: 1px
+        padding: 10px
+        border-radius: 7px
+        font-size: 15px
+        font-weight: 600
+
+        a
+            font-weight: 600
+            text-decoration: underline
+
+#Login2FA
+    .msg
+        width: 100%
+        padding: 0rem 0.78rem
+        padding-bottom: 14px
+        font-size: 14px
+        line-height: 18px
+        cursor: default
+
+    .buttonCode
+        display: flex
+        align-items: center
+        width: 100%
+        cursor: pointer
+        gap: 6px
+        border-width: 1px
+        padding: 10px
+        border-radius: 7px
+        font-size: 14px
+        font-weight: 500
+        transition: 0.3s
+
+    .buttonCode:hover
+        background-color: hsl(var(--accent))
