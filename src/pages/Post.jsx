@@ -11,7 +11,6 @@ import MSGassine from "../components/SubHeader";
 import PostItem, { PostItemSkeleton } from "../components/PostItem";
 import PostSkeleton from "../components/SkeletonPost";
 import NotFound from "../components/NotFound";
-import { Helmet } from "react-helmet";
 
 // Função para decodificar os escapes Unicode
 function decodeHtmlEntities(str) {
