@@ -10,7 +10,7 @@ function Footer() {
     <aside id="Footer">
         <div className="flex flex-col gap-5">
           <img width="180px" src={Logo} alt="" />
-          <p>Informação para leitores exigentes. <br/> Revista Timeline © 2025 </p>
+          <p>Informação para leitores exigentes. <br/> Desenvolvido por <Link target="_blank" to='https://github.com/GuiRamos01'>Guilherme Ramos</Link> </p>
         </div>
 
         <div className="group2">
