@@ -4,7 +4,9 @@ import axios from "axios";
 import "../style.sass"
 import "../styles/newsPage.sass"
 
-import { Button } from "@/components/ui/button.jsx"
+import { Button } from "@/components/ui/button.jsx";
+import { Helmet } from "react-helmet";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MSGassine from "../components/SubHeader";
