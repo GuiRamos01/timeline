@@ -93,7 +93,7 @@ function Header() {
           </SheetContent>
         </Sheet>
 
-        <img src={Logo} onClick={() => navigate(`/`)} alt="" />
+        <Link to="/"><img src={Logo} alt="" /></Link>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="cursor-pointer"><User /></DropdownMenuTrigger>

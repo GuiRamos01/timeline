@@ -112,6 +112,15 @@ const Post = () => {
     return <NotFound />;
   }
 
+  const videoSrc = {
+    type: "audio",
+    sources: [
+      {
+        src: "https://audios.ebc.com.br/f3/f3d885944e6fd0c4792192231af51fb2.mp3?download&filename=08-11-25_-_daniella_longuinho_-_transporte_enem_-_jf_ra_bsa.mp3&_gl=1*gxixfw*_ga*MTY5MTg2MzI4NS4xNzYyNzAzMTkw*_ga_TGW7R30M20*czE3NjI3MDMxOTAkbzEkZzEkdDE3NjI3MDMxOTckajUzJGwwJGgyOTEwMTg5MTc.",
+      }
+    ]
+  };
+
   return (
     <aside id="newsPage">
       {title && (
@@ -124,11 +133,11 @@ const Post = () => {
 
       <MSGassine/>
 
-      <div className="Main">
+      <main className="Main">
         {loading ? (
           <PostSkeleton/>
         ):(
-          <div className="post">
+          <section className="post">
             <div className="newsHeader">
               <h1>{title}</h1>
               {excerpt && <div className="subtitle" dangerouslySetInnerHTML={{ __html: excerpt }} />}
@@ -171,10 +180,10 @@ const Post = () => {
 
             <div className="msgApoie">
               <h1>APOIE O VERDADEIRO JORNALISMO</h1>
-              <p>Nosso objetivo é ser mais do que uma simples publicação; queremos ser uma fonte de inspiração e reflexão. Acreditamos no poder da informação para gerar discussões significativas e fomentar uma sociedade mais informada e engajada.</p>
-              <Button>Assine já</Button>
+              <p>Na Timeline, acreditamos que a compreensão do passado é essencial para interpretar o presente e antecipar o futuro. Nosso compromisso é proporcionar aos leitores uma análise crítica e bem-informada, enriquecida por uma equipe de jornalistas apaixonados e experientes.</p>
+              <Button>Assine</Button>
             </div>
-          </div>
+          </section>
         )}
 
         <h1 className="titleBlock">ÚLTIMAS NOTÍCIAS</h1>
@@ -195,7 +204,7 @@ const Post = () => {
             <PostItemSkeleton />
           </div>
         )}
-      </div>
+      </main>
 
       <Footer/>
     </aside>

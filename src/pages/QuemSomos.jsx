@@ -2,7 +2,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SubHeader from "../components/SubHeader";
 import styled from "styled-components";
-import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 import "../style.sass"
@@ -41,6 +40,7 @@ const QuemSomos = () => {
         <SubHeader/>
     
         <div className="Main">
+
           <div className="text">
             <h1>O que é a Revista Timeline?</h1>
             <p>Bem-vindo à Revista Timeline, criada para revelar a verdade dos acontecimentos que moldam o mundo. Fundada pelos jornalistas <b>Luís Ernesto Lacombe</b>, <b>Allan dos Santos</b> e <b>Max Cardoso</b>, a revista oferece um olhar profundo e abrangente dos eventos históricos, culturais e sociais.</p>
