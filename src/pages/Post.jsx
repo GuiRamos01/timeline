@@ -143,6 +143,8 @@ const Post = () => {
               {excerpt && <div className="subtitle" dangerouslySetInnerHTML={{ __html: excerpt }} />}
 
               <div className="author">
+                {authorImg && <img onClick={() => navigate(`/author/${author.slug}`)} src={authorImg} alt="" />}
+                
                 <div className="flex flex-col">
                   <Link to={`/author/${author.slug}`}>
                     {post && <p className="authorHeader">{post.yoast_head_json?.author}</p>}
