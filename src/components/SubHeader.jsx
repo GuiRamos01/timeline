@@ -43,8 +43,10 @@ const SubHeader = () => {
           <Link to="#"><Button>Assine</Button></Link>
       </div>
 
-      <div className="tradingview-widget-container" ref={container}>
-        <div className="tradingview-widget-container__widget"></div>
+      <div style={{ borderBottom: '2px solid #ccc' }}>
+        <div className="tradingview-widget-container" ref={container}>
+          <div className="tradingview-widget-container__widget"></div>
+        </div>
       </div>
     </div>
   );
