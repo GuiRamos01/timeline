@@ -125,7 +125,7 @@ const Post = () => {
     <aside id="newsPage">
       {title && (
         <Helmet>
-          <title>{title} | Revista Timeline</title>
+          <title>{title} - Autor(a) | Revista Timeline</title>
         </Helmet>
       )}
 
