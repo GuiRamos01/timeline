@@ -8,14 +8,11 @@ O projeto foca em uma experiência de leitura fluida, utilizando carrosséis int
 
 ## 🚀 Tecnologias Utilizadas
 
-* **Core:** [React 19](https://react.dev/) & [Vite](https://vitejs.dev/)
-* **Estilização:** [Sass](https://sass-lang.com/), [Tailwind CSS 4](https://tailwindcss.com/) & [Lucide React](https://lucide.dev/) (ícones)
-* **Gerenciamento de Estado:** [Redux Toolkit](https://redux-toolkit.js.org/) & [Redux Persist](https://github.com/rt2zz/redux-persist)
-* **Navegação:** [React Router DOM 7](https://reactrouter.com/)
-* **Componentes de UI:** [Radix UI](https://www.radix-ui.com/) & [Shadcn/UI](https://ui.shadcn.com/)
-* **Consumo de API:** [Axios](https://axios-http.com/)
-* **Carrosséis:** [React Slick](https://react-slick.neostack.com/)
-* **SEO:** [React Helmet](https://github.com/nfl/react-helmet)
+* **Frontend:** React (Vite), Javascript ES6+, Redux e React Router DOM.
+* **Estilização:** Sass, Tailwind CSS, Radix UI (via Shadcn/UI) e Lucide React (ícones)
+* **Consumo de API:** Axios
+* **Carrosséis:** React Slick
+* **SEO:** React Helmet
 
 ## 📋 Funcionalidades
 
