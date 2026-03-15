@@ -1,14 +1,12 @@
 # 📰 Revista Timeline
 
-A **Revista Timeline** é um portal de notícias dinâmico desenvolvido com React, que consome dados de uma API WordPress (WP-JSON) para entregar conteúdos sobre saúde, política, artigos e notícias em tempo real.
+A **Revista Timeline** é um portal de notícias dinâmico desenvolvido com React, que consome dados de uma API WordPress (WP-JSON) para entregar conteúdos em tempo real.
 
-O projeto foca em uma experiência de leitura fluida, utilizando carrosséis interativos, carregamento via skeletons para melhor UX e um design responsivo elegante.
+O projeto foca em uma experiência de leitura fluida, utilizando carrosséis interativos, carregamento via skeletons para melhor UX e um design responsivo.
 
 ### SITE DEMO: https://ubiquitous-daifuku-3e9b55.netlify.app
 
 ## 🚀 Tecnologias Utilizadas
-
-O projeto utiliza o que há de mais moderno no ecossistema de desenvolvimento web:
 
 * **Core:** [React 19](https://react.dev/) & [Vite](https://vitejs.dev/)
 * **Estilização:** [Sass](https://sass-lang.com/), [Tailwind CSS 4](https://tailwindcss.com/) & [Lucide React](https://lucide.dev/) (ícones)
