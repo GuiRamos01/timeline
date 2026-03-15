@@ -4,7 +4,7 @@ A **Revista Timeline** é um portal de notícias dinâmico desenvolvido com Reac
 
 O projeto foca em uma experiência de leitura fluida, utilizando carrosséis interativos, carregamento via skeletons para melhor UX e um design responsivo elegante.
 
-## SITE DEMO: https://ubiquitous-daifuku-3e9b55.netlify.app
+### SITE DEMO: https://ubiquitous-daifuku-3e9b55.netlify.app
 
 ## 🚀 Tecnologias Utilizadas
 
